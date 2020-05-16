@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en" layout:decorate="~{layouts/main}">
+<body>
+
+    <div layout:fragment="content">
+
+        <form name="registration" th:action="@{/registration}" th:object="${user}" method="post" class="form-signin">
+                <div th:text="#{alreadyExists}" id="err" th:if="${result} == 'already_exists'" class="alert alert-danger">Already exists.</div>
+                <h2 th:text="#{regTitle}" class="form-signin-heading">Registration</h2>
+                <div th:insert="auth/regforminput">Registration form input fields</div>
+        </form>
+        <a th:text="#{login}" href="auth/login">Bejelenkezés</a>
+
+    </div>
+
+</body>
+</html>

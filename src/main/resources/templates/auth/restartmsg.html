@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" layout:decorate="~{layouts/main}">
+    <body>
+
+        <div layout:fragment="content">
+
+            <div th:utext="#{masterActivated}" class="alert alert-success">
+                Master Admin has activated.<br>
+                Webapplication is restarting ... <span id="timer">-5</span>
+            </div>
+        </div>
+
+        <th:block layout:fragment="script">
+            <script type="text/javascript" src="../../static/js/custom.js" th:src="@{/js/custom.js}"></script>
+            <script type="text/javascript">
+                countDown(5, "https://localhost:8443/");
+            </script>
+        </th:block>
+    </body>
+</html>

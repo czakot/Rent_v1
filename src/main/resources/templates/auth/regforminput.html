@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div th:fragment="auth/regforminput">
+            <input type="text" id="fullName" name="fullName" th:field="*{fullName}" class="form-control" placeholder="fullName" th:placeholder="#{fullName}" required="true" /> 
+            <input type="text" id="email" name="username" th:field="*{email}" class="form-control" placeholder="emailAddr" th:placeholder="#{emailAddr}" required="true" /> 
+            <input type="password" id="password" name="password" class="form-control" placeholder="password" th:placeholder="#{password}" required="true" />
+            <button th:text="#{registration}" class="btn btn-lg btn-primary btn-block" type="submit">Registration</button>
+        </div>
+    </body>
+</html>

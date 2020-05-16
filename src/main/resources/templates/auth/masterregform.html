@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en" layout:decorate="~{layouts/main}">
+<body>
+
+    <div layout:fragment="content"  style="margin:auto; display:table">
+
+        <form name="registration" th:action="@{/masterregdo}" th:object="${user}" method="post" class="form-signin">
+                <h4 th:text="#{masterRegTitle}" class="form-signin-heading">Master registration</h4>
+                <div th:insert="auth/regforminput">Registration form input fields</div>
+        </form>
+
+    </div>
+
+</body>
+</html>
